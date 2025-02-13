@@ -1,7 +1,7 @@
 //controllers\inquiryController.js
 import Inquiry from "../models/Inquiry.js";
 
-// Create a new inquiry
+// Create a new inquiry added
 export const createInquiry = async (req, res) => {
   try {
     const { studentName, contactNumber, assignedTo, status, followUpDate, courseInterested, description } =
