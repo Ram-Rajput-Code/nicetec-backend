@@ -4,7 +4,7 @@ import Inquiry from "../models/Inquiry.js";
 // Create a new inquiry
 export const createInquiry = async (req, res) => {
   try {
-    const { studentName, contactNumber, assignedTo, status, followUpDate } =
+    const { studentName, contactNumber, assignedTo, status, followUpDate, courseInterested, description } =
       req.body;
     const inquiry = new Inquiry({
       studentName,
@@ -12,6 +12,7 @@ export const createInquiry = async (req, res) => {
       assignedTo,
       status,
       followUpDate,
+      courseInterested, description
     });
     await inquiry.save();
     res.status(201).json(inquiry);

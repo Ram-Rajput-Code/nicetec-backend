@@ -12,6 +12,8 @@ const inquirySchema = new mongoose.Schema(
       default: "Next Follow-up",
     },
     followUpDate: { type: Date },
+    courseInterested: { type: String, required: true }, // New Field
+  description: { type: String, required: false }, // New Field
   },
   { timestamps: true }
 );
